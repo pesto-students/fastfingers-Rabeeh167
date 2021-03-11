@@ -82,7 +82,7 @@ Zeplin App Link: zpl://project?pid=6023da0b656a94025ca7b58e
 - Bootstrap
 - ReactJS
 - SCSS
-- DOM Testing Library
+- DOM Testing Library 
 - Jest and React Testing Library
 
 **NOTE: React Component libraries like Material UI, Antd, Chakra UI are not allowed**
