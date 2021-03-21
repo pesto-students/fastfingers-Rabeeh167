@@ -1,0 +1,54 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$appBackgroundPrimaryColor:#012e30;
+$appBackgroundSecondaryColor:#000;
+$appContentColor:#ff5155;
+
+.app-bg {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  left: 0;
+  background-color: $appBackgroundSecondaryColor;
+  background-image: linear-gradient($appBackgroundSecondaryColor, $appBackgroundPrimaryColor);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-bg-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url('./assets/images//app-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 10%;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
