@@ -6,8 +6,7 @@ import reload_image from "../../assets/reload.png";
 import "./ResultPage.scss";
 import {
   SessionKeys,
-  getNameOfCurrentUserScores,
-  getHighScore
+  getNameOfCurrentUserScores
 } from "../../components/Common/Functions";
 
 export default function ResultPage({ playAgain }) {
