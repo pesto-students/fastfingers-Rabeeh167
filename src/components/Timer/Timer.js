@@ -35,8 +35,11 @@ export default function Timer({ duration, difficultyFactor, onTimeOut }) {
   const updateScore = () => {
     const timeTakenForWord = Math.floor(timeinMillisec - remainingTime);
     const timeTakenInSeconds = Number((timeTakenForWord / 1000).toFixed(2));
-    const newScore = (Number(currentScore) + timeTakenInSeconds).toFixed(2);
-    return newScore;
+    const newScore = (Number(currentScore) + (timeinMillisec/1000)).toFixed(2);
+    if(timeTakenInSeconds > 0 && remainingTime > 0) {
+      return newScore;
+    }
+    return 0;
   };
 
   const setNewTimeAndResetTimer = (newTime) => {
@@ -59,7 +62,6 @@ export default function Timer({ duration, difficultyFactor, onTimeOut }) {
     );
 
     if (remainingTime <= 0) {
-      sessionStorage.setItem(SessionKeys.PRESENTSCORE, updateScore());
       setNewTimeAndResetTimer(0);
       onTimeOut();
     }
