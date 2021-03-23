@@ -53,7 +53,7 @@ export default function HomePage() {
 
       <input
         type="text"
-        className="home-textbox"
+        className="text-input"
         value={playerName}
         placeholder="TYPE YOUR NAME"
         onChange={(event) => {
