@@ -139,7 +139,7 @@ export default function Game() {
           </div>
 
           <input
-            className="word-input-text"
+            className="text-input game-text-input"
             type="text"
             value={userInput}
             onChange={(event) => {

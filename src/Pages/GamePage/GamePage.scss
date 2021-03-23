@@ -28,7 +28,7 @@
     border: none;
     outline: none;
     text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-    font-family: Gotham;
+    font-family: Arial;
     font-size: 30px;
     font-weight: 500;
     font-stretch: normal;
@@ -38,6 +38,7 @@
     text-align: left;
     color: #ff5155;
     text-transform: uppercase;
+    cursor: pointer;
   }
   .stop-image {
     width: 44px;
@@ -53,12 +54,13 @@
     width: 100%;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 4rem;
+    // padding-top: 4rem;
+    margin-right: 15%;
   }
   
   .game-word {
     text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-    font-family: Gotham;
+    font-family: Arial;
     font-size: 5rem;
     font-weight: 500;
     font-stretch: normal;
@@ -69,22 +71,21 @@
     color: #fff;
     text-transform: uppercase;
   }
-  
-  .word-input-text {
-    width: 400px;
-    margin: 15px 0 15px;
-    padding: 10px;
-    opacity: 0.59;
-    border-radius: 5px;
-    box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
-    text-transform: uppercase;
-    font-family: Breamcatcher;
-    font-size: 25px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.2;
-    letter-spacing: normal;
-    text-align: left;
+  .game-text-input{
+    text-align: center;
+  }
+  .text-input{
+    margin-top: 50px;
+    padding: 15px;
+    cursor: pointer;
+    font-family: Arial;
+    background-color: #b8b8b8;
     color: #032228;
+    font-size: 25px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width:28%;
   }
