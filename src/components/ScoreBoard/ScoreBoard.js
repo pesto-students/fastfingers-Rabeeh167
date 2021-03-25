@@ -16,16 +16,22 @@ export default function ScoreBoard() {
 
   const highestScore = getHighScore();
   const scoreBoardContent = currentUserScores ? (
+    <div>
     <ul className="score-list">
       {currentUserScoresArray.map((score, index) => (
         <li
           key={index}
-          className={`${highestScore === Number(score) ? "highest-score" : ""}`}
         >
           {`Game ${index + 1} : ${score}`}
         </li>
       ))}
     </ul>
+    <ul className="score-list best-score">
+        <li className="highest-score">
+        {`Best Score : ${highestScore}`}
+        </li>
+    </ul>
+    </div>
   ) : null;
 
   return (

@@ -17,6 +17,7 @@ const initSessionStorage = (playerName, gameLevel) => {
 
 export default function HomePage() {
   const [playerName, setplayerName] = useState("");
+  const [errorMessage, seterrorMessage] = useState("");
   const [gameLevel, setgameLevel] = useState(GameLevel.EASY);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -27,6 +28,7 @@ export default function HomePage() {
       initSessionStorage(playerName, gameLevel);
       setIsPlaying(true);
     } else {
+      seterrorMessage("Please enter your name to continue !")
       playerNameRef.current.focus();
     }
   };
@@ -58,11 +60,14 @@ export default function HomePage() {
         placeholder="TYPE YOUR NAME"
         onChange={(event) => {
           setplayerName(event.target.value);
+          seterrorMessage("");
         }}
         ref={playerNameRef}
         required
       />
-
+      <div className="error-text">
+      {errorMessage}
+      </div>
       <select
         className="home-selection"
         value={gameLevel}
